@@ -1,0 +1,680 @@
+
+/* IMPORTING FONTS  */
+
+@font-face {
+  font-family: "Niveau Grotesk Bold SC";
+  src: url("../font/NiveauGroteskBold-SmallCaps.eot");
+  src: local("Niveau Grotesk Bold Small Caps"),
+    local("NiveauGroteskBold-SmallCaps"),
+    url("../static/font/") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskBold-SmallCaps.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskBold-SmallCaps.woff") format("woff"),
+    url("../static/font/NiveauGroteskBold-SmallCaps.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Niveau Grotesk Light SC";
+  src: url("../static/font/NiveauGroteskLight-SmallCaps.eot");
+  src: local("Niveau Grotesk Light Small Caps"),
+    local("NiveauGroteskLight-SmallCaps"),
+    url("../static/font/NiveauGroteskLight-SmallCaps.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskLight-SmallCaps.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskLight-SmallCaps.woff") format("woff"),
+    url("../static/font/NiveauGroteskLight-SmallCaps.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Niveau Grotesk Regular SC";
+  src: url("../font/NiveauGroteskRegular-SmallCaps.eot");
+  src: local("Niveau Grotesk Regular Small Caps"),
+    local("NiveauGroteskRegular-SmallCaps"),
+    url("../static/font/NiveauGroteskRegular-SmallCaps.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskRegular-SmallCaps.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskRegular-SmallCaps.woff") format("woff"),
+    url("../static/font/NiveauGroteskRegular-SmallCaps.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Niveau Grotesk";
+  src: url("../font/NiveauGroteskExtraLight-Italic.eot");
+  src: local("Niveau Grotesk ExtraLight Italic"),
+    local("NiveauGroteskExtraLight-Italic"),
+    url("../static/font/NiveauGroteskExtraLight-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskExtraLight-Italic.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskExtraLight-Italic.woff") format("woff"),
+    url("../static/font/NiveauGroteskExtraLight-Italic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Niveau Grotesk Medium SC";
+  src: url("../static/font/NiveauGroteskMedium-SmallCaps.eot");
+  src: local("Niveau Grotesk Medium Small Caps"),
+    local("NiveauGroteskMedium-SmallCaps"),
+    url("../static/font/NiveauGroteskMedium-SmallCaps.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskMedium-SmallCaps.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskMedium-SmallCaps.woff") format("woff"),
+    url("../static/font/NiveauGroteskMedium-SmallCaps.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Niveau Grotesk";
+  src: url("../static/font/NiveauGroteskRegular-Italic.eot");
+  src: local("Niveau Grotesk Regular Italic"),
+    local("NiveauGroteskRegular-Italic"),
+    url("../static/font/NiveauGroteskRegular-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskRegular-Italic.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskRegular-Italic.woff") format("woff"),
+    url("../static/font/NiveauGroteskRegular-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Niveau Grotesk ExtraLight SC";
+  src: url("../static/font/NiveauGroteskExtraLight-SmallCaps.eot");
+  src: local("Niveau Grotesk ExtraLight Small Caps"),
+    local("NiveauGroteskExtraLight-SmallCaps"),
+    url("../static/font/NiveauGroteskExtraLight-SmallCaps.eot?#iefix") format("embedded-opentype"),
+    url("../static/font/NiveauGroteskExtraLight-SmallCaps.woff2") format("woff2"),
+    url("../static/font/NiveauGroteskExtraLight-SmallCaps.woff") format("woff"),
+    url("../static/font/NiveauGroteskExtraLight-SmallCaps.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+
+* {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Niveau Grotesk Bold SC" ;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root{
+
+ c1: #4C0B0B
+  #4C4C4C
+  #FC0404
+  #D4D3D3
+  #949494
+}
+
+
+.slide-page {
+  position: fixed;
+  background: #010101;
+  width: 100vw;
+  height: 100vh;
+}
+
+.slide-absolute {
+  width: 90%;
+  height: 90%;
+  /* background: #5f2929; */
+
+  position: relative;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.slide-inner-relative {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.inner-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.image-for-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* or object-fit: contain; */
+  margin: auto;
+}
+
+.layout-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background: chocolate; */
+  height: 10%;
+  width: 100%;
+}
+
+.layout-top-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-text {
+  font-size: 40px;
+  color: #ddd;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.layout-bottom {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 90%;
+  width: 100%;
+
+  /* background: chartreuse; */
+}
+
+.layout-bottom-left {
+color: #ddd;
+  display: flex;
+  justify-content: center;
+  /* background: chocolate; */
+  padding: 50px 20px;
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  margin: auto;
+}
+
+.layout-left-inner-absolute {
+  /* max-width: 600px; */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: justify;
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+border: 1px solid white;
+
+
+
+
+  position: absolute;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background: cornflowerblue; */
+  border-radius: 30px;
+  width: calc(100% - 40px);
+  height: calc(100% - 100px);
+}
+
+
+
+
+
+.layout-bottom-right {
+  /* background: chocolate; */
+  padding: 50px 20px;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  right: 0;
+}
+
+.layout-right-inner-absolute {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  /* max-width: 600px; */
+
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+  box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+  
+
+  border: 1px solid white;
+  border-radius: 45px;
+
+  color: #D4D3D3;
+
+  border-radius: 30px;
+  width: calc(100% - 40px);
+  height: calc(100% - 100px);
+}
+
+
+
+.animation-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: #5f2929;
+  color: cornsilk;
+  padding: 20px;
+  cursor: pointer;
+  border: 2px double cornsilk;
+}
+
+
+/* // vıdeo // */
+
+.mattepost-video{
+
+  
+}
+
+
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+
+
+
+/* PRELOADER   */
+
+.preloader-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+
+.mattepost-preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+left: 0;
+  z-index: 999999;
+  background: transparent;
+
+}
+
+.preloader-center-relative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  border-radius: 20px;
+}
+
+
+.mattepost-logo {
+
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation-name: logoLetterSpacing;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  font-size: 45px;
+  letter-spacing: 10px;
+  font-weight: 800;
+  color: #ccc;
+}
+
+/* LANGUAGE BUTTONS */
+
+.lang-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  height: 100%;
+}
+
+.lang-list {
+  position: relative;
+top: 170px;
+  margin: 60px;
+  padding: 20px;
+  width: 450px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.lang-items {
+  cursor: pointer;
+  text-align: center;
+  width: 130px!important;
+  background: transparent;
+  color: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 10px 7px;
+  margin: 10px 15px;
+  border: 1px solid rgb(243, 243, 243);
+
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-name: buttonSlalom;
+  animation-timing-function: ease-in-out;
+
+  -webkit-box-shadow: 0px 10px 13px -7px #ffffff70, 0px 50px 50px 7px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #ffffff70, 0px 50px 50px 7px rgba(0, 0, 0, 0);
+  -webkit-animation-play-state: running;
+
+
+  transition: 1s;
+  height: 25%;
+  font-size: 20px;
+}
+
+
+
+.lang-items:hover {
+
+  text-align: center;
+  width: 150px;
+  background: rgb(243, 243, 243);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin: 10px 15px;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: inset 0px 0px 15px 5px #000000;
+  box-shadow: inset 0px 0px 6px 1px #000000;
+  -webkit-animation-play-state: paused;
+
+  transition: 1s;
+  letter-spacing: 3px;
+}
+
+
+
+.half-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-top {
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50%;
+  background: #010101;
+
+}
+
+.half-top hr{
+  opacity: 0;
+  width: 0px;
+  height: 1px;
+}
+
+.half-bottom hr{
+  opacity: 0;
+  width: 0px;
+  height: 1px;
+
+}
+.half-bottom {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: end;
+  height: 50%;
+  background: #010101;
+
+}
+
+/* TEXTS */
+
+.mattepost-text{
+  font-family: "Niveau Grotesk Medium SC" ;
+
+  padding: 20px;
+  font-size: 16px;
+  text-align: justify;
+
+}
+.edit-text{
+  font-family: "Niveau Grotesk Medium SC" ;
+
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
+
+}
+.color-text{
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Niveau Grotesk Medium SC" ;
+
+}
+.vfx-text{
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Niveau Grotesk Medium SC" ;
+
+}
+.online-text{
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Niveau Grotesk Medium SC" ;
+
+}
+.sound-text{
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Niveau Grotesk Medium SC" ;
+
+}
+
+/* Headers */
+
+.mattepost-header{
+  font-size: 60px;
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+.edit-header{
+  font-size: 60px;
+
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+.color-header{
+  font-size: 60px;
+
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+.vfx-header{
+  font-size: 60px;
+
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+.online-header{
+  font-size: 60px;
+
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+.sound-header{
+  font-size: 60px;
+  font-family: "Niveau Grotesk Bold SC" ;
+}
+
+/* gallery  */
+
+.gallery{
+  width: 100vw;
+  height: 100vh;
+  background: #010101;
+}
+
+.gallery i{
+  display: none;
+position: absolute;
+bottom: 10px;
+font-size: 14px;
+font-family:"Niveau Grotesk Light Small Caps" ;
+font-weight: 200;
+width: 60%;
+left: 50%;
+transform: translate(-50%,-50%);
+margin: auto;
+color: #ddd;
+text-align: center;
+}
+
+.gallery-header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+font-size: 22px;
+
+
+
+}
+
+/* KEYFREAMES  */
+
+@keyframes buttonSlalom {
+  0% {
+    top: -20px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  100% {
+    top: -20px;
+  }
+}
+
+
+@keyframes logoLetterSpacing {
+
+  0% {
+    letter-spacing: 10px;
+  }
+
+  50% {
+    letter-spacing: 5px;
+  }
+
+  100% {
+    letter-spacing: 10px;
+  }
+}
+
+
+/* RESPOSIVE */
+
+
+.lang-items{width: auto;}
+
+@media (max-width:800px){
+
+  .preloader-center-relative{
+    padding: 0px 10px;
+  }
+  .mattepost-logo{
+    font-size: 26px;
+  }
+  .lang-items{font-size: 13px;
+    font-family: "Niveau Grotesk Light SC";
+  
+  }
+
+
+.lang-items:hover {
+
+  text-align: center;
+  width: auto;
+  background: rgb(243, 243, 243);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: inset 0px 0px 15px 5px #000000;
+  box-shadow: inset 0px 0px 6px 1px #000000;
+  -webkit-animation-play-state: inherit;
+  padding: auto;
+
+  font-size: 13px;
+  transition: 1s;
+  letter-spacing: 0px;
+}
+
+
+  .lang-buttons{
+    font-size: 13px;
+    font-family: "Niveau Grotesk Light SC";
+
+  }
+  section{
+    display: none;
+  }
+
+  .gallery i {
+    display: block;
+  }
+}
