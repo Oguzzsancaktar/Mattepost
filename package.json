@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Oguzzsancaktar/Mattepost#readme",
   "dependencies": {
     "gsap": "^3.6.1",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "serve": "^12.0.0"
   }
 }
