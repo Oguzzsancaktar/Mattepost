@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "lite-server",
-    "eject": "react-scripts eject"
+
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "gsap": "^3.6.1",
     "jquery": "^3.6.0",
-    "serve": "^12.0.0"
+    "serve": "^12.0.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
